@@ -1,0 +1,21 @@
+.no-wrap () {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .no-wrap-clamp (@line-clamp: 2) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @line-clamp;
+    overflow: hidden;
+  }
+  
+  .clearfix () {
+    zoom: 1;
+    &:after {
+      display: block;
+      content: ' ';
+      clear: both;
+    }
+  }

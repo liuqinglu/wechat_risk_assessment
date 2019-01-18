@@ -1,0 +1,57 @@
+.ui-page-login,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    .mui-content {
+        height: 100%;
+    }
+}
+
+// 横向导航
+ul.nav {
+    padding: 0px 20px;
+    font-size: 12px;
+    .isAfter {
+        color: #5EB85E;
+        border-color: #5EB85E;
+        &:before {
+            background: #5EB85E;
+        }
+    }
+    li {
+        // width: 50px;
+        width: 14.285%;
+        float: left;
+        list-style: none;
+        border-top: 2px solid #ccc;
+        padding-top: 10px;
+        position: relative;
+        span {
+            display: inline-block;
+            width: 28px;
+            line-height: 14px;
+        }
+    }
+    li:before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 0px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #999;
+    }
+    li:last-child {
+        border: none;
+        width: 28px;
+        &:before {
+            top: -4px;
+        }
+        span {
+            width: 14px;
+        }
+    }
+}

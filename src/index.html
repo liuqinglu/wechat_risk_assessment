@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>注册绑定</title>
+    <link rel="stylesheet" href="./static/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="./pages/css/style.min.css" />
+    <style>
+        html,
+        body,
+        .mui-content{
+            background: #fff;
+        }
+        .mui-content-padded{
+            margin: 0;
+            padding: 20px 15px;
+        }
+        .header{
+            text-align: center;
+            height: 200px;
+        }
+        .mui-title{
+            color: #5EB85E;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        /* 表单上下边框 */
+        .mui-input-group:before,
+        .mui-input-group:after{
+            height: 0;
+        }
+        /* 输入框底边 */
+        .mui-input-group .mui-input-row:after{
+            left: 15px;
+            right: 15px;
+        }
+        .mui-input-group .mui-input-row {
+            height: 50px;
+        }
+        
+        input[type=color], 
+        input[type=date], 
+        input[type=datetime-local], 
+        input[type=datetime], 
+        input[type=email], 
+        input[type=month], 
+        input[type=number], 
+        input[type=password], 
+        input[type=search], 
+        input[type=tel], 
+        input[type=text], 
+        input[type=time], 
+        input[type=url], 
+        input[type=week], 
+        select, 
+        textarea{
+            height: 50px;
+            padding: 10px 25px;
+        }
+        
+        .mui-input-row .mui-input-clear~.mui-icon-clear, 
+        .mui-input-row .mui-input-password~.mui-icon-eye, 
+        .mui-input-row .mui-input-speech~.mui-icon-speech{
+            top: 20px;
+        }
+        .mui-input-row .label-title{
+            width: 30%;
+            padding: 20px 0 0 15px;
+        }
+        .mui-input-row .label-title > span{
+            color: #f66;
+            font-weight: 900;
+        }
+        .mui-input-row label~input[type=text]{
+            width: 70%;
+            padding: 10px 30px 0 0;
+        }
+        
+        /* 注册按钮 */
+        .mui-btn-blue,
+        .mui-btn-primary,
+        input[type=submit]{
+            border-radius: 0;
+        }
+        /* placeholder */
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #ccc;
+            font-size: 16px;
+        }
+        
+        label{
+            color: #666;
+        }
+	</style>
+</head>
+
+<body>
+    <div class="mui-content">
+        <div class="mui-content-padded header">
+            <img src="images/login.png">
+            <h3 class="mui-title">西安未央益龄中医医院</h3>
+        </div>
+        <form id='login-form' class="mui-input-group" action="">
+            <div class="mui-input-row">
+                <label class="label-title"><span>*</span>姓名：</label>
+                <input type="text" id='account' name='姓名' class="mui-input-clear mui-input" placeholder="请输入">
+            </div>
+            <div class="mui-input-row">
+                <label class="label-title"><span>*</span>手机号：</label>
+                <input type="text" id='phone' name='手机号' class="mui-input-clear mui-input" placeholder="请输入">
+            </div>
+            <div class="mui-input-row">
+                <label class="label-title"><span>*</span>档案号：</label>
+                <input type="text" id='record_code' name='档案号' class="mui-input-clear mui-input" placeholder="请输入">
+            </div>
+        </form>
+        <div class="mui-content-padded">
+            <button id='login' type="submit" class="mui-btn mui-btn-block mui-btn-primary">提交注册</button>
+        </div>
+        <div class="mui-content-padded fixed-bottom">
+            <div class="mui-input-row mui-checkbox mui-left">
+                <label>我已预约并同意会员注册条款</label>
+                <input name="agree" value="agree" type="checkbox" checked="checked">
+            </div>
+        </div>
+    </div>
+
+    <script src="./common/lib/jquery-1.9.0.min.js"></script>
+    <script src="./static/mui/js/mui.min.js"></script>
+    <script src="./pages/js/login.js"></script>
+    <script>
+        mui.init();
+    </script>
+</body>
+
+</html>

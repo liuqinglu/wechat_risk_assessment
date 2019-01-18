@@ -1,0 +1,88 @@
+{
+  "name": "physical_examination_platform",
+  "version": "1.0.0",
+  "description": "风评微信公众号",
+  "main": "index.js",
+  "author": "hubvues",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp dev",
+    "start": "gulp run",
+    "build": "cross-env NODE_ENV='production' gulp build"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "browserify-css"
+      ],
+      [
+        "lessify"
+      ],
+      [
+        "stringify",
+        {
+          "appliesTo": {
+            "includeExtensions": [
+              ".html"
+            ]
+          },
+          "minify": true
+        }
+      ],
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.24.4",
+    "browserify-css": "^0.14.0",
+    "cross-env": "^5.1.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-js-import": "^1.0.6",
+    "gulp-less": "^3.5.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-replace": "^0.4.4",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.5",
+    "http-proxy-middleware": "^0.19.0",
+    "imagemin-pngquant": "^5.1.0",
+    "jquery-mousewheel": "^3.1.13",
+    "lessify": "^1.0.2",
+    "pdfjs-dist": "^2.0.943",
+    "run-sequence": "^2.2.1",
+    "stringify": "^5.2.0",
+    "xlsx": "^0.13.5"
+  }
+}

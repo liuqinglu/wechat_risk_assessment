@@ -1,0 +1,11 @@
+/node_modules
+/dist
+/dev
+/build
+*.lock
+.DS_Store
+*.log
+.idea
+.vscode
+*.rar
+*.zip

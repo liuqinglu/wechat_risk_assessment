@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>风险评估</title>
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="./../static/mui/css/mui.min.css" />
+    <!--自定义的css-->
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/risk-assessment.min.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- 固定头部的模块导航 -->
+    <header class="risk-assessment">
+        <ul class="nav mui-clearfix">
+            <li class="isAfter"><span>基础信息</span></li>
+            <li><span>饮食生活</span></li>
+            <li><span>既往病史</span></li>
+            <li><span>家族病史</span></li>
+            <li><span>体感体质</span></li>
+            <li><span>自我评定</span></li>
+            <li><span>体检</span></li>
+        </ul>
+    </header>
+
+    <div class="mui-content">
+        <!-- 注意事项 -->
+        <div id="attention" class="attention">
+            <div class="attention-text">
+                <p>1、获取真实、准确、可信的信息是保证评估质量和效度的前提。评估过程中应处于一个安静祥和的环境和氛围，评估能够毫无顾虑且精力集中，回答的每个问题都是真实感受。正如《黄帝内经》所言，“闭户塞牖，系之病者，数问其情，以从其意”。</p>
+                <p>2、每个问题的选项没有优劣和对错之分，所反映的只是不同参评者的感受或状况。</p>
+                <p>3、适当控制完成答卷的时间，不宜把完成答卷的时间拖得太长，对每个问题答案的选择尽量是“第一印象”，而不是“深思熟虑”的结果。</p>
+            </div>
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-success mui-btn-outlined">暂不评估</button>
+                <button type="button" class="mui-btn mui-btn-primary">我已阅读 开始评估</button>
+            </div>
+        </div>
+
+        <!-- 问卷评估 -->
+        <div class="risk-assessment" id="questionnaireForm">
+            <!-- 基础信息 -->
+            <div id="baseInfo">
+                <!-- 注意事项 -->
+                <div class="attention">
+                    <div class="attention-text">
+                        <p>1. 问卷信息对准确判断和把握您的健康状况以及确定健康干预方案至关重要，请务必如实填写，因信息填写有误（虚假）造成的误判误治，将由您自负。</p>
+                        <p>2. 我们将对您提供的有关信息保密并依法保护您的隐私。由您本人或其他渠道造成的失密我们不承担任何责任。</p>
+                        <p>3. 填写问卷时仅对黑色字体部分进行操作，标记*为必填题目。</p>
+                    </div>
+                </div>
+                <div class="form baseInfo">
+                    <h4>基础信息</h4>
+                    <form class="mui-input-group">
+                        <div class="mui-input-row">
+                            <label>姓名</label>
+                            <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+                        </div>
+                        <div class="mui-input-row">
+                            <label>证件类型</label>
+                            <select name="" id="">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                        <div class="mui-input-row">
+                            <label>证件号</label>
+                            <input type="password" class="mui-input-password" placeholder="请输入证件号">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- 下一个项目 -->
+            <div class="bottom-next">
+                <button class="mui-btn mui-btn-primary">下一个项目（1/7）</button>
+            </div>
+
+
+
+
+            <!-- 饮食生活 -->
+
+            <!-- 既往病史 -->
+
+            <!-- 家族病史 -->
+
+            <!-- 体感体质 -->
+
+            <!-- 自我评定 -->
+
+            <!-- 体检 -->
+        </div>
+    </div>
+
+    <script src="./../common/lib/jquery-1.9.0.min.js"></script>
+    <script src="./../static/mui/js/mui.min.js"></script>
+    <!-- <script src="./js/risk-assessment.js"></script> -->
+    <script>
+        // $('#attention').hide();
+    </script>
+</body>
+
+</html>
