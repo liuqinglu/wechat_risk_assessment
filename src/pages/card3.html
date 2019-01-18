@@ -11,8 +11,11 @@
 	<link rel="stylesheet" href="./../static/mui/css/mui.min.css" />
 	<!--自定义的css-->
 	<link rel="stylesheet" href="./css/style.min.css" />
-	<!-- <link rel="stylesheet" href="./css/risk-assessment.min.css" /> -->
+	<link rel="stylesheet" href="./css/risk-assessment.min.css" />
 	<style>
+		.mui-table-view:before {
+			height: 0;
+		}
 	</style>
 </head>
 
@@ -20,13 +23,11 @@
 	<div class="mui-content">
 		<ul class="mui-table-view">
 			<li class="mui-table-view-cell">
-				<a class="mui-navigate-right">Item 1</a>
+				<a class="mui-navigate-right">
+					问卷详情</a>
 			</li>
 			<li class="mui-table-view-cell">
-				<a class="mui-navigate-right">Item 2</a>
-			</li>
-			<li class="mui-table-view-cell">
-				<a class="mui-navigate-right">Item 3</a>
+				<a class="mui-navigate-right">评估报告</a>
 			</li>
 		</ul>
 	</div>

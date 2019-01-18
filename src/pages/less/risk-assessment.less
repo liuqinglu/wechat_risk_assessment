@@ -23,26 +23,27 @@ body,
         color: #333;
         font-weight: 500;
     }
+    /* 风险评估(审核通过未失效) */
+    .tip-box {
+        margin: 20px;
+        text-align: center;
+        background: #FFFAEB;
+        border: 1px solid #6f9;
+        border-radius: 3px;
+        h4 {
+            margin: 15px;
+        }
+        p {
+            color: #666;
+        }
+    }
 }
 
 .risk-assessment {
     display: none;
 }
 
-/* 风险评估(审核通过未失效) */
-
-.mui-card {
-    margin: 20px !important;
-    text-align: center;
-    padding-top: 20px;
-    background: #FFFAEB;
-    border: 1px solid #6f9;
-    p {
-        color: #666;
-    }
-}
-
-ul {
+ul.list-box {
     display: inline-block;
     font-size: 0;
     width: 100%;
@@ -53,7 +54,40 @@ ul {
         position: relative;
         float: left;
         width: 100%;
-        .list-box {
+        i {
+            position: absolute;
+            top: 102px;
+            left: -10px;
+            width: 1px;
+            height: 52px;
+            background: #BCBCBC;
+            margin: -34px 25px -8px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -31px;
+                left: -14px;
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                background: #eee;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: -26px;
+                left: -9px;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                background: #ccc;
+                z-index: 999;
+            }
+        }
+        &:last-child i {
+            background: #fff;
+        }
+        .item-box {
             position: relative;
             float: right;
             width: 85%;
@@ -63,27 +97,27 @@ ul {
             padding: 6px 20px;
             border-radius: 5px;
             box-shadow: -3px 3px 20px 1px #ccc;
-        }
-        .list-box:before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 25px;
-            width: 16px;
-            transform: rotate(45deg);
-            height: 16px;
-            background: #fff;
-        }
-        .list-box:after {
-            content: '';
-            position: absolute;
-            right: 15px;
-            top: 25px;
-            width: 16px;
-            height: 16px;
-            transform: rotate(45deg);
-            border-top: 2px solid #ccc;
-            border-right: 2px solid #ccc;
+            &:before {
+                content: '';
+                position: absolute;
+                left: -8px;
+                top: 25px;
+                width: 16px;
+                transform: rotate(45deg);
+                height: 16px;
+                background: #fff;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: 15px;
+                top: 25px;
+                width: 16px;
+                height: 16px;
+                transform: rotate(45deg);
+                border-top: 2px solid #ccc;
+                border-right: 2px solid #ccc;
+            }
         }
         span.audit-state {
             color: #f93;
@@ -93,40 +127,9 @@ ul {
             color: #999;
         }
     }
-    li i {
-        position: absolute;
-        top: 102px;
-        left: -10px;
-        width: 1px;
-        height: 52px;
-        background: #BCBCBC;
-        margin: -34px 25px -8px;
-    }
-    li:last-child i {
-        background: #fff;
-    }
-    li i:before {
-        content: '';
-        position: absolute;
-        top: -31px;
-        left: -14px;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        background: #eee;
-    }
-    li i:after {
-        content: '';
-        position: absolute;
-        top: -26px;
-        left: -9px;
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        background: #ccc;
-        z-index: 999;
-    }
-    li.active>i:after {
-        background: #5EB85E !important;
+    li.active {
+        i:after {
+            background: #5EB85E !important;
+        }
     }
 }
